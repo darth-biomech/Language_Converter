@@ -4,7 +4,23 @@
     <projectFile>Language_Converter/Language_Converter.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d97d6cdd-f0fd-4d7a-94f5-4a8789893d22" name="Changes" comment="" />
+    <list default="true" id="d97d6cdd-f0fd-4d7a-94f5-4a8789893d22" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Language_Converter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Language_Converter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/Form1.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Debug/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Debug/Language_Converter.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Debug/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Debug/Language_Converter.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Debug/Settings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Debug/Settings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,12 +81,14 @@
       <updated>1656093209922</updated>
       <workItem from="1656093214781" duration="40389000" />
       <workItem from="1656090041141" duration="27364000" />
+      <workItem from="1656090021172" duration="3010000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">

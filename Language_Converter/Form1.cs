@@ -249,5 +249,10 @@ namespace Language_Converter
                     outputTextField.Text = Program.thisProgram.Transcriptize(Program.thisProgram.BeginConversion(inputTextField.Text,replaceLettersCheckbox.Checked));
 
         }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            Program.thisProgram.wikiFormat = checkBox2.Checked;
+        }
     }
 }

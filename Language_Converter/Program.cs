@@ -72,6 +72,7 @@ namespace Language_Converter
         public string pathToDictionary = "";
         public bool saveCopy;
         public bool replLetters;
+        public bool wikiFormat = true;
 
         public void Start()
         {
@@ -101,6 +102,7 @@ namespace Language_Converter
         private void SplitDictionary()
         {
             string dict = Globals.wordDictionary;
+            dict = Regex.Replace(dict, @"<style>(\n|.)*?style>", "");
             dict = Regex.Replace(dict, @"<th.*?>", "<th>");
             dict = Regex.Replace(dict, @"<table.*?>", "<table>");
             dict = Regex.Replace(dict, @"<td.*?>", "<td>");
@@ -115,8 +117,8 @@ namespace Language_Converter
             catch (Exception)
             {
                 isCorrectFile = false;
-                MessageBox.Show(@"The dictionary file is in incorrect format. Please read readme.txt for tips on the dictionary file formatting", @"Incorrect dictionary file format", 
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+               MessageBox.Show(@"The dictionary file is in incorrect format. Please read readme.txt for tips on the dictionary file formatting", @"Incorrect dictionary file format", 
+                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             if (isCorrectFile)
@@ -320,14 +322,26 @@ namespace Language_Converter
         public void ExportDictionary(string path, bool asCopy = false)
         {
             string newDictionary = " ";
+            string wikiClass = "wikitable";
+            string wikiTableEn = " {{#if: {{{1|}}} | style=\"display:none\"| }}";
+            string wikiTableRu = " {{#if: {{{1|}}} | | style=\"display:none\"}}";
+            if (!wikiFormat)
+            {
+                wikiClass = "raharrTable";
+                wikiTableEn = " class=\"enwords\"";
+                wikiTableRu = " class=\"ruwords\"";
+            }
             bool firstbit = true;
-            newDictionary = "<table class=\"wikitable\" style=\"line-height: 1.3em!important;color: #9bdfff!important;background: #03132f!important;border: 1px solid #0084c2!important; width: 600px;\">";
+            newDictionary = "<table class=\""+wikiClass+"\" style=\"line-height: 1.3em!important;color: #9bdfff!important;background: #03132f!important;border: 1px solid #0084c2!important; width: 600px;\">";
+            if (!wikiFormat)
+                newDictionary = "<style>\nbody \n{\nbackground:black\n}\nth\n{\nborder: 1px solid #0084c2 !important;\n}\n.enwords \n{\ndisplay: none;\n}\n.ruwords \n{\ndisplay: table-cell;\n}\n \n</style>\n" + newDictionary;
+            
             foreach (DictionaryWord word in Globals.wordsArray)
             {
                 string curCell;
                 if (word.raharr == "-------------")
                 {
-                    if (firstbit)
+                    if (firstbit && wikiFormat)
                     {
                         firstbit = false;
                         curCell = "\n\t<tr><td colspan = \"2\"style=\"  text-align: right;\">{{Tnavbar-view|Dictionary}}</td></tr>\n\n";
@@ -338,10 +352,10 @@ namespace Language_Converter
                 else
                 {
                     string wordBegin =          "\n\t<tr>\n";
-                    string wordRu =             "\t\t<th {{#if: {{{1|}}} | | style=\"display:none\"}}>\t\t"+word.wordRu+" </th>\n";
-                    string wordEn =             "\t\t<th {{#if: {{{1|}}} | style=\"display:none\"| }}>\t\t"+word.wordEn+" </th>\n";
-                    string wordRuTranscript =   "\t\t<th {{#if: {{{1|}}} | | style=\"display:none\"}}>\t\t"+word.raharr+" </th>\n";
-                    string wordEnTranscript =   "\t\t<th {{#if: {{{1|}}} | style=\"display:none\"| }}>\t\t"+Transcriptize(word.raharr)+" </th>\n";
+                    string wordRu =             "\t\t<th"+wikiTableRu+">\t\t"+word.wordRu+" </th>\n";
+                    string wordEn =             "\t\t<th"+wikiTableEn+">\t\t"+word.wordEn+" </th>\n";
+                    string wordRuTranscript =   "\t\t<th"+wikiTableRu+">\t\t"+word.raharr+" </th>\n";
+                    string wordEnTranscript =   "\t\t<th"+wikiTableEn+">\t\t"+Transcriptize(word.raharr)+" </th>\n";
                     string wordEnd =            "\n\t</tr>\n";
                     curCell = wordBegin+wordEn+wordEnTranscript+"\n"+wordRu+wordRuTranscript+wordEnd;
                 }

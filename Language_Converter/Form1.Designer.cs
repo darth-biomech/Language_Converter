@@ -56,6 +56,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // DicPathString
@@ -298,7 +299,7 @@
             this.saveCopyCheckbox.Name = "saveCopyCheckbox";
             this.saveCopyCheckbox.Size = new System.Drawing.Size(105, 24);
             this.saveCopyCheckbox.TabIndex = 20;
-            this.saveCopyCheckbox.Text = "As a copy";
+            this.saveCopyCheckbox.Text = "A copy";
             this.saveCopyCheckbox.UseVisualStyleBackColor = true;
             this.saveCopyCheckbox.CheckedChanged += new System.EventHandler(this.saveCopyCheckbox_CheckedChanged);
             // 
@@ -349,12 +350,26 @@
             this.comboBox1.Text = "Russian";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // checkBox2
+            // 
+            this.checkBox2.Checked = true;
+            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.checkBox2.Location = new System.Drawing.Point(568, 63);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(108, 24);
+            this.checkBox2.TabIndex = 27;
+            this.checkBox2.Text = "Wiki format";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (12)))), ((int) (((byte) (89)))), ((int) (((byte) (135)))));
             this.ClientSize = new System.Drawing.Size(1122, 503);
+            this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
@@ -392,6 +407,8 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.CheckBox checkBox2;
 
         private System.Windows.Forms.ComboBox comboBox1;
 
