@@ -73,6 +73,7 @@ namespace Language_Converter
         public bool saveCopy;
         public bool replLetters;
         public bool wikiFormat = true;
+        public int winHeight = 550;
 
         public void Start()
         {
@@ -177,6 +178,7 @@ namespace Language_Converter
             _settingsIni.Write("PathToDictionary", pathToDictionary, "Dictionary");
             _settingsIni.Write("SaveCopy", saveCopy.ToString(), "Dictionary");
             _settingsIni.Write("ReplaceLetters", replLetters.ToString(), "Dictionary");
+            _settingsIni.Write("winHeight", winHeight.ToString(), "Dictionary");
         }
         private void LoadSettings()
         {
@@ -206,6 +208,15 @@ namespace Language_Converter
             else
             {
                 replLetters = _settingsIni.Read("ReplaceLetters","Dictionary") == "True";
+            }
+            
+            if(!_settingsIni.KeyExists("winHeight","Dictionary"))
+            {
+                _settingsIni.Write("winHeight", winHeight.ToString(), "Dictionary");
+            }
+            else
+            {
+                winHeight = Int32.Parse(_settingsIni.Read("winHeight","Dictionary"));
             }
         }
         public void ChangeWord(DictionaryWord newWord)
@@ -368,6 +379,37 @@ namespace Language_Converter
             File.WriteAllText(savePath, newDictionary);
         }
 
+        public int HasDuplicate(DictionaryWord word)
+        {
+            int result = -1;
+            foreach (DictionaryWord wordMatch in Globals.wordsArray)
+            {
+                if (word.raharr == wordMatch.raharr && word.index != wordMatch.index)
+                {
+                    result = wordMatch.index;
+                    break;
+                }
+                else if (word.index != wordMatch.index)
+                {
+                    string[] separator = {",", " ", "particle \"", "частица \"", "\""};
+                    string[] defWords = (word.wordEn + " " + word.wordRu).Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                    string stringToCheck = (wordMatch.wordEn + " " + wordMatch.wordRu);
+                    if (defWords.Length > 0 && !word.wordRu.Contains("частица \"") )
+                    {
+                        
+                            var pattern = new Regex(@"\W");
+                            var q = pattern.Split(stringToCheck).Any(w => defWords.Contains(w)) && !stringToCheck.Contains("частица \"") ;
+                            if (q)
+                            {
+                                result = wordMatch.index;
+                                break;
+                            }
+                    }
+                }
+            }
+
+            return result;
+        }
         public string Transcriptize(string word)
         {
             char[] inWord = word.ToCharArray();
@@ -451,5 +493,7 @@ namespace Language_Converter
             }
             return  string.Join("", newWord);
         }
+
+        
     }
 }

@@ -14,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Debug/Settings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Debug/Settings.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Settings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Settings.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.pdb" afterDir="false" />
@@ -82,6 +83,9 @@
       <workItem from="1656093214781" duration="40389000" />
       <workItem from="1656090041141" duration="27364000" />
       <workItem from="1656090021172" duration="3010000" />
+      <workItem from="1656090019563" duration="5368000" />
+      <workItem from="1656090019094" duration="5830000" />
+      <workItem from="1656090120219" duration="582000" />
     </task>
     <servers />
   </component>
