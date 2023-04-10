@@ -104,6 +104,31 @@ namespace Language_Converter
                 wordsList.SelectedIndex = selection;
             }
         }
+		
+		/*
+		//To allow the user to rearrange the contents of a ListBox in a C# WinForms application, we can use the drag-and-drop functionality of the ListBox control. Here's an example function that demonstrates how to implement this functionality:
+private void wordsList_MouseDown(object sender, MouseEventArgs e)
+{
+    if (wordsList.SelectedItem == null) return;
+    wordsList.DoDragDrop(wordsList.SelectedItem, DragDropEffects.Move);
+}
+
+private void listBox1_DragOver(object sender, DragEventArgs e)
+{
+    e.Effect = DragDropEffects.Move;
+}
+
+private void wordsList_DragDrop(object sender, DragEventArgs e)
+{
+    int newIndex = wordsList.IndexFromPoint(wordsList.PointToClient(new Point(e.X, e.Y)));
+    if (newIndex < 0) newIndex = wordsList.Items.Count - 1;
+    object droppedItem = e.Data.GetData(typeof(string));
+    wordsList.Items.Remove(droppedItem);
+    wordsList.Items.Insert(newIndex, droppedItem);
+}
+//This function uses the MouseDown, DragOver, and DragDrop events of the ListBox control to implement drag-and-drop functionality. When the user clicks on an item in the ListBox, the MouseDown event is triggered, and the selected item is added to the drag-and-drop data using the DoDragDrop method. When the user drags the item over the ListBox, the DragOver event is triggered, and the Effect property of the DragEventArgs object is set to Move to indicate that the item can be moved. When the user drops the item onto the ListBox, the DragDrop event is triggered, and the dropped item is removed from its original position in the ListBox and inserted at the new position specified by the IndexFromPoint method
+//To use this function in your WinForms application, you can add the MouseDown, DragOver, and DragDrop event handlers to your ListBox control and copy the code above into the corresponding event handlers.
+		*/
         private void wordsList_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!wordIsModified)
