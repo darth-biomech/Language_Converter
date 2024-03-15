@@ -6,11 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="d97d6cdd-f0fd-4d7a-94f5-4a8789893d22" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Language_Converter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Language_Converter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Debug/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Debug/Language_Converter.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Debug/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Debug/Language_Converter.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Debug/Settings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Debug/Settings.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Settings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Settings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.pdb" afterDir="false" />
@@ -43,14 +50,14 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="XThreadsFramesViewSplitterKey" value="0.21752267" />
-    <property name="settings.editor.selected.configurable" value="RiderNuGetOptionsPageId" />
+    <property name="settings.editor.selected.configurable" value="pyconsole" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
     <configuration name="Language_Converter" type="DotNetProject" factoryName=".NET Project">
-      <option name="EXE_PATH" value="" />
+      <option name="EXE_PATH" value="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.exe" />
       <option name="PROGRAM_PARAMETERS" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Language_Converter/bin/Release" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
       <option name="USE_MONO" value="0" />
@@ -60,7 +67,7 @@
       <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
       <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
       <option name="PROJECT_KIND" value="Console" />
-      <option name="PROJECT_TFM" value="" />
+      <option name="PROJECT_TFM" value=".NETFramework,Version=v4.7.1" />
       <method v="2">
         <option name="Build" />
       </method>
@@ -80,7 +87,7 @@
       <workItem from="1656090019563" duration="5368000" />
       <workItem from="1656090019094" duration="5830000" />
       <workItem from="1656090120219" duration="582000" />
-      <workItem from="1656090033688" duration="7935000" />
+      <workItem from="1656090033688" duration="9994000" />
     </task>
     <servers />
   </component>
