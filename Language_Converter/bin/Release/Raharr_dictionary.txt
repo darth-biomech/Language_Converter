@@ -1,0 +1,1695 @@
+<table class="wikitable" style="line-height: 1.3em!important;color: #9bdfff!important;background: #03132f!important;border: 1px solid #0084c2!important; width: 600px;">
+	<tr><td colspan = "2"style="  text-align: right;">{{Tnavbar-view|Dictionary}}</td></tr>
+
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		particle "from" </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ra </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		частица "из" </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ра </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		particle "together" </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nel </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		частица "вместе" </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нел </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		particle "not" </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nus </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		частица "не" </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нус </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		particle "noble" </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		sha </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		частица "благородность" </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ша </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		particle "in" </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hs </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		частица "в" </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хс </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		particle "under" </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		us </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		частица "под" </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ус </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		particle "above" </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		kr </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		частица "над" </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		кр </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		particle "ownership" </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		so </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		частица "владение" </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		со </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		particle "this" </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hf </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		частица "это" </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хф </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		particle "property" </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ro </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		частица "свойство" </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ро </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		particle "who" </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		kk </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		частица "кто" </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		кк </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		particle "many" </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nshe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		частица "много" </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нше </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		particle "little" </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nue </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		частица "мало" </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нуе </th>
+
+	</tr>
+
+	<tr>
+		<td colspan = "2"> &nbsp; <br> </td>
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		one </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		harah </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		один </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		харах </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		two </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		has </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		два </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хас </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		three </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		had </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		три </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хад </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		four </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ras </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		четыре </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рас </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		five </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		roh </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		пять </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рох </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		six </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hadera </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		шесть </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хадера </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		seven </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		sth </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		семь </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		стх </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		eight </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rro </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		восемь </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рро </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nine </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		kref </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		девять </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		креф </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ten </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		khas </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		десять </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		кхас </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		eleven </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		garsu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		одинадцать </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		гарсу </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		twelve </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		khne </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		двенадцать </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		кхне </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		zero, nothing, emptiness </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nul </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ноль, ничто, пустота </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нул </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		dozen </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		khneha </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		десяток, дюжина </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		кхнеха </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		many, great </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		neshoshe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		многочисленный, великий </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нешоше </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		little, insignificant </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nulne </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		малый, незначительный </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нулне </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		infinity </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hef </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		бесконечность </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хеф </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		number </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		knekha </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		число </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		кнекха </th>
+
+	</tr>
+
+	<tr>
+		<td colspan = "2"> &nbsp; <br> </td>
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		mountain </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		zhe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		гора </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		зхе </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		cliff </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nulzhe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		скала </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нулзхе </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hill </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ohor </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		холм </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		охор </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		valley </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rashurr </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		долина </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рашурр </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		gorge, canyon, crevice </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hzoshe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ущелье, каньон, щель </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хзоше </th>
+
+	</tr>
+
+	<tr>
+		<td colspan = "2"> &nbsp; <br> </td>
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		river </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		kahmi </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		речка </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		кахми </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		big river </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		kashoshe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		большая река </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		кашоше </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		lake </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ohtshu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		озеро </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		охтшу </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		sea, ocean </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ohtshoshe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		море, океан </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		охтшоше </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		water </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rahtshu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		вода </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рахтшу </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		bay, cove </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hzorahtshu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		залив, бухта </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хзорахтшу </th>
+
+	</tr>
+
+	<tr>
+		<td colspan = "2"> &nbsp; <br> </td>
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		island </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		haroht </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		остров </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		харохт </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		swamp </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rakrahtshu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		болото </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ракрахтшу </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		cave </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hzoashor </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		пещера </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хзоашор </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		stone, boulder, rock </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ashoor </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		камень, валун </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ашоор </th>
+
+	</tr>
+
+	<tr>
+		<td colspan = "2"> &nbsp; <br> </td>
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		forest </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rahni </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		лес </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рахни </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		dense forest, jungle </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rahshosh </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		густой лес, джунгли </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рахшош </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		field </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rashurshosh </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		поле </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рашуршош </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		desert </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hirroshe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		пустыня </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хирроше </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		snow, tundra, north </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		lorshoshe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		снег, тундра, север </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		лоршоше </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		branch </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ruh </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ветка </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рух </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		trunk </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rushoh </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ствол </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рушох </th>
+
+	</tr>
+
+	<tr>
+		<td colspan = "2"> &nbsp; <br> </td>
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		city, settlement </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hess </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		город, поселение </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хесс </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		home </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hesha </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		дом </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хесха </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		place </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rassu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		место </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рассу </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nature, not artificial </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rahsu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		природа, естественное </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рахсу </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		world, universe </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nerasu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		мир, вселенная </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нерасу </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		space, expanse, abyss </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hefassu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		космос, пространство, бездна </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хефассу </th>
+
+	</tr>
+
+	<tr>
+		<td colspan = "2"> &nbsp; <br> </td>
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		existence, life </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		kehot </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		существование, жизнь </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		кехот </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		myself </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ah </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		я </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ах </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		he, she, they </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rah </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		он, она </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рах </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		you </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hfrah </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ты </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хфрах </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		creature, it </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		kah </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		существо, оно </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ках </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		air, ghostly, ethereal </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nusar </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		воздух, призрачный, бесплотный </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нусар </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		solid, planet, soil </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		harr </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		твердь, планета, почва </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		харр </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		human, sapient, friend </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		raharr </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		человек, разумный, друг </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рахарр </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		adversary, rival, enemy </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rksark </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		неприятель, соперник, враг </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рксарк </th>
+
+	</tr>
+
+	<tr>
+		<td colspan = "2"> &nbsp; <br> </td>
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		year, season </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		arasashoshe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		год, сезон </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		арасашоше </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		day (time unit) </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ara </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		день(отрезок времени) </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ара </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		week </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		arahara </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		неделя </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		арахара </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		current, now </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		sahoshri </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		сейчас </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		сахошри </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		past </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		sahushri </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		прошлое </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		сахушри </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		future </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		sahef </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		будущее </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		сахеф </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		time </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		sahz </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		время </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		сахз </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		century, long, duration </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		araknehashe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		век, долго, длительность </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		аракнехаше </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		moment, second, short </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		sahnul </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		момент, секунда, короткий </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		сахнул </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		night </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hil </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ночь </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хил </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		evening </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hilashera </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		вечер </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хилашера </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		day (time of day) </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		him </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		день(время суток) </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хим </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		morning </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hiashera </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		утро </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хиашера </th>
+
+	</tr>
+
+	<tr>
+		<td colspan = "2"> &nbsp; <br> </td>
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hand </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nehe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рука </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нехе </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		leg </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		neka </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нога </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нека </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		head, face </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		reahk </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		голова, лицо </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		реахк </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		body </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		knerr </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		тело </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		кнерр </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		tail </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		asheka </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хвост </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ашека </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		heart </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		haat </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		сердце </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хаат </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		eye </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ozoe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		глаз </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		озое </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		finger </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hkka </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		палец </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хкка </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		claw, tip </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		sherr </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		коготь, кончик </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		шерр </th>
+
+	</tr>
+
+	<tr>
+		<td colspan = "2"> &nbsp; <br> </td>
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		question </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nan </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		вопрос </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нан </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		problem </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		raks </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		проблема </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ракс </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		reply </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nanul </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ответ </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нанул </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		word </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		khash </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		слово </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		кхаш </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		anecdote </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		osnal </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		случай </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		оснал </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		side </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ekhe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		сторона </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		экхе </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		strength, physical force </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hrashso </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		сила(физическая) </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		храшсо </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		energy, power, force </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rrenh </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		энергия, мощь, сила </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рренх </th>
+
+	</tr>
+
+	<tr>
+		<td colspan = "2"> &nbsp; <br> </td>
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		father </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		tata </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		отец </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		тата </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		mother </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		shasha </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		мать </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		шаша </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		female </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rii </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		женщина </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рии </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		male </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		htua </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		мужчина </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хтуа </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		offspring, child </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		garr </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ребёнок, дитя </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		гарр </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		family </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		tashsha </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		семья </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ташша </th>
+
+	</tr>
+
+	<tr>
+		<td colspan = "2"> &nbsp; <br> </td>
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		segment, piece </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		harasu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		часть, кусок </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		харасу </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		system </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ekrahe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		система </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		экрахе </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		war </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nehtrua </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		война </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нехтруа </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		military </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nehtruahe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		армия </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нехтруахе </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		end </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nulha </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		конец </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нулха </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		fire, flame </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		karurar </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		огонь, пламя </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		карурар </th>
+
+	</tr>
+
+	<tr>
+		<td colspan = "2"> &nbsp; <br> </td>
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		scary, evil </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		raksar </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		страшный, злой </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		раксар </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		demon, fear, predator </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rrak </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		демон, страх, хищник </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ррак </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		view, image, depiction </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		aheg </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		вид, изображение, образ </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ахег </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		relationship (logic) </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		neo </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		отношение, логическая связь </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нео </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		meeting, encounter </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hararuk </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		встреча </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		харарук </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		money </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		shoshaks </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		деньги </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		шошакс </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		task, work, labor </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		osst </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		дело, работа, труд </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		осст </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		true </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		oshri </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		правда </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ошри </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		false,lie </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nusshri </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ложь </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нусшри </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		book </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		shoshkha </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		книга </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		шошкха </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		company </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rahashe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		компания </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рахаше </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		history </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		shoshegu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		история </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		шошегу </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hope </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		shonan </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		надежда </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		шонан </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		opportunity </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		osnan </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		возможность </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		оснан </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		result </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		raksna </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		результат </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		раксна </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ability </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rorksna </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		умение </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рорксна </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		machine, mechanism, object </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		zahe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		машина, механизм, предмет </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		захе </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		group </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		shosherra </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		группа </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		шошерра </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		Alliance </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		sherrahar </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		Альянс </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		шеррахар </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		transport, shuttle </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		zahnekruk </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		транспорт, шаттл </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		захнекрук </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		right </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ekrasho </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		право </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		экрашо </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		path </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		harao </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		путь </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		харао </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		name </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ahra </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		имя </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ахра </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		language, conversation </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		okora </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		язык, разговор </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		окора </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		solution </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ranul </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		решение </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ранул </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		authority </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hrashoshera </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		власть </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		храшошера </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		door </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		haz </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		дверь </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хаз </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		beginning </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		harrashera </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		начало </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		харрашера </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		help </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		harap </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		помощь </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		харап </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		target </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		karuk </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		цель </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		карук </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		information, experience </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nahanu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		информация, опыт </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нахану </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		thought </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ahnahan </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		мысль </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ахнахан </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		memory </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ahnahushri </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		воспоминание, память </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ахнахушри </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		smartness, mind </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nelahanu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ум </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нелахану </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		stupidity </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nusahanu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		глупость </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нусахану </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		education </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		kast </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		обучение </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		каст </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		action </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		osnarha </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		действие </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		оснарха </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		quality </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ki </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		качество </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ки </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		situation </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		oshan </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ситуация </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		осхан </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		gratitude, thanks </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		raosan </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		благодарность, спасибо </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		раосан </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		attention, insight </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		kset </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		внимание, проницательность </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ксет </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		road </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		haraoarr </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		дорога </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хараоарр </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		look </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ozohara </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		взгляд </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		озохара </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		love </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		harahirr </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		любовь </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		харахирр </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		game </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		kasshera </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		игра </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		касшера </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		state </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		kanah </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		состояние </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		канах </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		bliss </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ao </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		блаженство </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ао </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		meaning </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		khashnan </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		смысл </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		кхашнан </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		thing </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		kahsu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		вещь </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		кахсу </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		food </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hes </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		еда </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хес </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		table </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hessu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		стол </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хессу </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		market </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hesshaks </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		рынок </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хесшакс </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		dot </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hfe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		точка </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хфе </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		center </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hfrao </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		центр </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хфрао </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		idea, advice </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ahnahnu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		идея, совет </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ахнахну </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		rule </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hrahanu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		правило </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		храхану </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		move </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nekruk </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		движение </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		некрук </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		death </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		zannul </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		смерть </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		заннул </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		opinion </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ahknakora </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		мнение </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ахкнакора </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		speech </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ahnashoshe </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		речь </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ахнашоше </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		wall </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		oshashu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		стена </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ошашу </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		window </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		oshashezor </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		окно </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ошашезор </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hole, passage </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hzor </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		дыра, отверстие, проход </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хзор </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		science </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nehtu </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		наука </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нехту </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		message </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		ahskst </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		сообщение </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ахскст </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		interest </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		shork </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		интерес </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		шорк </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		role </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		osnanha </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		роль </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		оснанха </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		event </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		osnaruk </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		событие </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		оснарук </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		cold, hell </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hilor </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		холод, ад </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хилор </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		heat, heaven, light </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		hirr </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		жара, рай, свет </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		хирр </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		god(s) </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		nusharr </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		бог(и) </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нусхарр </th>
+
+	</tr>
+
+	<tr>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		scientist, medic, biologist </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		neht </th>
+
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		ученый, медик, биолог </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		нехт </th>
+
+	</tr>
+
+</table>

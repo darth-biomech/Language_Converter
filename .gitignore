@@ -1,3 +1,4 @@
 
 /Language_Converter/obj/Release
-/Language_Converter/bin/Release
+Language_Converter/bin/Release/GroupDocs.Search.dll
+Language_Converter/bin/Release/GroupDocs.Search.xml
