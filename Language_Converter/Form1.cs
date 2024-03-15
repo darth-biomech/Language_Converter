@@ -14,13 +14,14 @@ namespace Language_Converter
         private bool wordIsModified;
         private bool displayInEnglish;
         int curwinHeight = 100;
+        int curwinWidth = 100;  
         public Form1()
         {
             InitializeComponent();
             DicPathString.Text = Program.thisProgram.GetDictionaryPath();
             replaceLettersCheckbox.Checked = Program.thisProgram.replLetters;
             saveCopyCheckbox.Checked = Program.thisProgram.saveCopy;
-            this.Size = new Size(this.Width, Program.thisProgram.winHeight);
+            this.Size = new Size(Program.thisProgram.winWidth, Program.thisProgram.winHeight);
             ResizeAll();
         }
 
@@ -82,10 +83,14 @@ namespace Language_Converter
 
                     string tabSpace = "";
                     if (rahword.Length < 11)
-                        tabSpace = "           ".Substring(rahword.Length);
+                        tabSpace = "                ".Substring(rahword.Length);
                     if (Program.thisProgram.HasDuplicate(word) !=-1)
                     {
                         rahword = "[D] "+rahword;
+                    }
+                    else
+                    {
+                        rahword = "    "+rahword;
                     }
 
                     string numspace = " ";
@@ -331,28 +336,35 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
         private void Form1_Resize(object sender, EventArgs e)
         {
             Program.thisProgram.winHeight = this.Height;
+            Program.thisProgram.winWidth = this.Width;
              ResizeAll();
         }
 
         private void ResizeAll()
         {
             curwinHeight = Program.thisProgram.winHeight;
+            curwinWidth = Program.thisProgram.winWidth;
              ResizeForm(wordsList,258);
+             int secondRowLoc = (int)(curwinWidth / 1.8);
+             wordsList.Left = secondRowLoc;
+             rightPanel.Left = secondRowLoc;
+             wordsList.Width = curwinWidth - wordsList.Location.X -20;
+             rightPanel.Width = curwinWidth - wordsList.Location.X -20;
+             topPanel.Width = secondRowLoc -30;
+             DicPathString.Width = secondRowLoc - buttonSaveDictionary.Width - buttonOpenDic.Width - 50;
              int textfieldsheight = (curwinHeight-228)/2;
-             inputTextField.Size = new Size(inputTextField.Size.Width, textfieldsheight);
              midPanel.Location = new Point(midPanel.Location.X, textfieldsheight + 90);
+             midPanel.Width = topPanel.Width;
+             
+             inputTextField.Size = new Size(secondRowLoc -40, textfieldsheight);
+             outputTextField.Size = inputTextField.Size;
+             
              outputTextField.Location = new Point(outputTextField.Location.X, textfieldsheight + 162);
-             outputTextField.Size = new Size(outputTextField.Size.Width, textfieldsheight);
-             //  ResizeForm(outputTextField,0,0.3);
+             
         }
         private void ResizeForm(Control obj, int offset)
         {
             int newitemHeight = (curwinHeight-offset);
-            obj.Size = new Size(obj.Size.Width, newitemHeight);
-        }
-        private void ResizeForm(Control obj, int height, double percent)
-        {
-            int newitemHeight = (int) (curwinHeight*percent);
             obj.Size = new Size(obj.Size.Width, newitemHeight);
         }
     }

@@ -6,7 +6,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-
+using GroupDocs.Search;
 namespace Language_Converter
 {
 
@@ -74,6 +74,7 @@ namespace Language_Converter
         public bool replLetters;
         public bool wikiFormat = true;
         public int winHeight = 550;
+        public int winWidth = 1140;
 
         public void Start()
         {
@@ -179,46 +180,53 @@ namespace Language_Converter
             _settingsIni.Write("SaveCopy", saveCopy.ToString(), "Dictionary");
             _settingsIni.Write("ReplaceLetters", replLetters.ToString(), "Dictionary");
             _settingsIni.Write("winHeight", winHeight.ToString(), "Dictionary");
+            _settingsIni.Write("winWidth", winWidth.ToString(), "Dictionary");
         }
         private void LoadSettings()
         {
-            
-            if(!_settingsIni.KeyExists("PathToDictionary","Dictionary"))
+            if (pathToDictionary == String.Empty)
+                pathToDictionary = Application.StartupPath;
+            TryGetSettingValue("PathToDictionary", ref pathToDictionary);
+            TryGetSettingValue("SaveCopy",ref saveCopy);
+            TryGetSettingValue("ReplaceLetters", ref replLetters);
+            TryGetSettingValue("winHeight", ref winHeight);
+            TryGetSettingValue("winWidth", ref winWidth);
+        }
+ 
+        private void TryGetSettingValue(string key, ref int var)
+        {
+            if (!_settingsIni.KeyExists(key, "Dictionary"))
             {
-                if (pathToDictionary == String.Empty)
-                    pathToDictionary = Application.StartupPath;
-                _settingsIni.Write("PathToDictionary", pathToDictionary, "Dictionary");
+                _settingsIni.Write(key, var.ToString(), "Dictionary");
             }
             else
             {
-                pathToDictionary = _settingsIni.Read("PathToDictionary","Dictionary");
-            }
-            if(!_settingsIni.KeyExists("SaveCopy","Dictionary"))
-            {
-                _settingsIni.Write("SaveCopy", saveCopy.ToString(), "Dictionary");
-            }
-            else
-            {
-                saveCopy = _settingsIni.Read("saveCopy","Dictionary") == "True";
-            }
-            if(!_settingsIni.KeyExists("ReplaceLetters","Dictionary"))
-            {
-                _settingsIni.Write("ReplaceLetters", replLetters.ToString(), "Dictionary");
-            }
-            else
-            {
-                replLetters = _settingsIni.Read("ReplaceLetters","Dictionary") == "True";
-            }
-            
-            if(!_settingsIni.KeyExists("winHeight","Dictionary"))
-            {
-                _settingsIni.Write("winHeight", winHeight.ToString(), "Dictionary");
-            }
-            else
-            {
-                winHeight = Int32.Parse(_settingsIni.Read("winHeight","Dictionary"));
+                var = Int32.Parse(_settingsIni.Read(key, "Dictionary"));
             }
         }
+        private void TryGetSettingValue(string key, ref bool var)
+        {
+            if (!_settingsIni.KeyExists(key, "Dictionary"))
+            {
+                _settingsIni.Write(key, var.ToString(), "Dictionary");
+            }
+            else
+            {
+                var = _settingsIni.Read(key, "Dictionary").ToLower() == "true";
+            }
+        }
+        private void TryGetSettingValue(string key, ref string var)
+        {
+            if (!_settingsIni.KeyExists(key, "Dictionary"))
+            {
+                _settingsIni.Write(key, var, "Dictionary");
+            }
+            else
+            {
+                var = _settingsIni.Read(key, "Dictionary");
+            }
+        }
+
         public void ChangeWord(DictionaryWord newWord)
         {
             int ai = -1;
