@@ -35,9 +35,6 @@
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
     <ItemGroup>
-        <Reference Include="GroupDocs.Search, Version=24.2.1.0, Culture=neutral, PublicKeyToken=716fcc553a201e56">
-          <HintPath>..\..\..\..\..\Program Files (x86)\GroupDocs\Search for .NET\lib\net45\GroupDocs.Search.dll</HintPath>
-        </Reference>
         <Reference Include="mscorlib" />
         <Reference Include="System" />
         <Reference Include="System.Core" />

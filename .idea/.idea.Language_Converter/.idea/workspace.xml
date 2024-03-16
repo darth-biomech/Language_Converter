@@ -6,18 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d97d6cdd-f0fd-4d7a-94f5-4a8789893d22" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Language_Converter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Language_Converter/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/Language_Converter.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/Language_Converter.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Debug/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Debug/Language_Converter.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Debug/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Debug/Language_Converter.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Debug/Settings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Debug/Settings.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Settings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Settings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Debug/Language_Converter.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.CopyComplete" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.pdb" afterDir="false" />
@@ -87,7 +83,7 @@
       <workItem from="1656090019563" duration="5368000" />
       <workItem from="1656090019094" duration="5830000" />
       <workItem from="1656090120219" duration="582000" />
-      <workItem from="1656090033688" duration="9994000" />
+      <workItem from="1656090033688" duration="13735000" />
     </task>
     <servers />
   </component>

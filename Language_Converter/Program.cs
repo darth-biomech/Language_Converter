@@ -8,7 +8,6 @@ using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
-using GroupDocs.Search;
 namespace Language_Converter
 {
 
@@ -47,16 +46,14 @@ namespace Language_Converter
         {  
             return (value < min) ? min : (value > max) ? max : value;  
         }
+        
+        [DllImport("kernel32.dll")]
+        static extern bool AttachConsole(int dwProcessId = -1);
         /// <summary> The main entry point for the application. </summary>
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            
-            
-            AttachConsole(-1);
-            Console.WriteLine("BOO!");
+            AttachConsole();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
@@ -65,9 +62,6 @@ namespace Language_Converter
             thisProgram.Start();
             Application.Run(guiForm);
         }
-        
-        [DllImport("kernel32.dll")]
-        static extern bool AttachConsole(int dwProcessId);
     }
 
     public static class Globals
@@ -296,9 +290,11 @@ namespace Language_Converter
         public string BeginConversion(string inputText,bool formatRaharr)
         {
             string text = inputText;
+            
             if (inputText != string.Empty)
             {
                 string regPattern = @"[.,<>{}!@#$%^&*()_+=\-\'\`\~|\/\\ 	:0-9;]";
+                
                 var fixedInput = Regex.Replace(text, regPattern, " ");
                 string[] brokenText = fixedInput.Split();
                 foreach (string word in brokenText)
@@ -308,18 +304,7 @@ namespace Language_Converter
                         Console.WriteLine(word);
                         foreach (DictionaryWord dictWord in Globals.wordsArray)
                         {
-                            string[] synonyms = new Index().Dictionaries.SynonymDictionary.GetSynonyms(word);
-                            bool hasIt = false;
-                            foreach (string synonym in synonyms)
-                            {
-                                Console.WriteLine(synonym);
-                                if (dictWord.Contains(synonym))
-                                {
-                                    hasIt = true;
-                                    break;
-                                }
-                            }
-                            if (hasIt) //dictWord.Contains(word))
+                            if (dictWord.Contains(word))
                             {
                                 string replPattern = @"\b" + word + @"\b";
                                 text = Regex.Replace(text, replPattern, dictWord.raharr);
