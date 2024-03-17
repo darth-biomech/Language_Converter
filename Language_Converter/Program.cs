@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+// ReSharper disable StringLiteralTypo
 namespace Language_Converter
 {
 
@@ -301,7 +302,7 @@ namespace Language_Converter
             {
                 if (word.index == newWord.index)
                 {
-                    DictionaryWord oldWord = word;
+                    // DictionaryWord oldWord = word;
                     int index = Globals.wordsArray.FindIndex(a => a.index==newWord.index);
                     ai = index;
                     Globals.wordsArray[index] = newWord;
@@ -324,9 +325,9 @@ namespace Language_Converter
                 }
                 else if (word.index > index)
                 {
-                    DictionaryWord tempword = word;
-                    tempword.index += 1;
-                    tempDict.Add(tempword);
+                    DictionaryWord tempWord = word;
+                    tempWord.index += 1;
+                    tempDict.Add(tempWord);
                 }
                 else
                 {
@@ -413,7 +414,7 @@ namespace Language_Converter
         }
         public void ExportDictionary(string path, bool asCopy = false)
         {
-            string newDictionary = " ";
+            string newDictionary;
             string wikiClass = "wikitable";
             string wikiTableEn = " {{#if: {{{1|}}} | style=\"display:none\"| }}";
             string wikiTableRu = " {{#if: {{{1|}}} | | style=\"display:none\"}}";
@@ -423,7 +424,7 @@ namespace Language_Converter
                 wikiTableEn = " class=\"enwords\"";
                 wikiTableRu = " class=\"ruwords\"";
             }
-            bool firstbit = true;
+            bool firstBit = true;
             newDictionary = "<table class=\""+wikiClass+"\" style=\"line-height: 1.3em!important;color: #9bdfff!important;background: #03132f!important;border: 1px solid #0084c2!important; width: 600px;\">";
             if (!wikiFormat)
                 newDictionary = "<style>\nbody \n{\nbackground:black\n}\nth\n{\nborder: 1px solid #0084c2 !important;\n}\n.enwords \n{\ndisplay: none;\n}\n.ruwords \n{\ndisplay: table-cell;\n}\n \n</style>\n" + newDictionary;
@@ -433,9 +434,9 @@ namespace Language_Converter
                 string curCell;
                 if (word.raharr == "-------------")
                 {
-                    if (firstbit && wikiFormat)
+                    if (firstBit && wikiFormat)
                     {
-                        firstbit = false;
+                        firstBit = false;
                         curCell = "\n\t<tr><td colspan = \"2\"style=\"  text-align: right;\">{{Tnavbar-view|Dictionary}}</td></tr>\n\n";
                     } 
                     else
