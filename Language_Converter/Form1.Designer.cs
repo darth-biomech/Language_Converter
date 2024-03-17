@@ -406,6 +406,10 @@
             this.outputTextField.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.outputTextField.Size = new System.Drawing.Size(640, 150);
             this.outputTextField.TabIndex = 3;
+            this.outputTextField.Click += new System.EventHandler(this.outputTextField_SelectionChangedArgs);
+            this.outputTextField.MouseClick += new System.Windows.Forms.MouseEventHandler(this.outputTextField_MouseClick);
+            this.outputTextField.KeyUp += new System.Windows.Forms.KeyEventHandler(this.outputTextField_KeyUp);
+            this.outputTextField.MouseUp += new System.Windows.Forms.MouseEventHandler(this.outputTextField_MouseClick);
             // 
             // conflictLabel
             // 

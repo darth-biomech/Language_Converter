@@ -455,10 +455,10 @@
 	</tr>
 
 	<tr>
-		<th {{#if: {{{1|}}} | style="display:none"| }}>		field </th>
+		<th {{#if: {{{1|}}} | style="display:none"| }}>		field, land </th>
 		<th {{#if: {{{1|}}} | style="display:none"| }}>		rashurshosh </th>
 
-		<th {{#if: {{{1|}}} | | style="display:none"}}>		поле </th>
+		<th {{#if: {{{1|}}} | | style="display:none"}}>		поле, земля </th>
 		<th {{#if: {{{1|}}} | | style="display:none"}}>		рашуршош </th>
 
 	</tr>

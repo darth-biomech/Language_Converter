@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Drawing.Text;
@@ -136,6 +137,11 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
 		*/
         private void wordsList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            UpdateWordsListSelection();
+        }
+
+        private void UpdateWordsListSelection()
+        {
             if (!wordIsModified)
             {
                 currentWord = Program.thisProgram.FindWord(wordsList.SelectedIndex);
@@ -145,13 +151,14 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
                 wordnumber.Text = currentWord.index.ToString();
                 SwitchButtonsEditedWord(false);
                 int dupIndex = Program.thisProgram.HasDuplicate(currentWord);
-                if (dupIndex !=-1)
+                if (dupIndex != -1)
                 {
                     bool def = false;
                     DictionaryWord conflword = Program.thisProgram.FindWord(dupIndex);
-                    string[] separator = { ",", " ","particle \"","частица \"","\"" };
-                    string[] definitions = (currentWord.wordEn+" "+currentWord.wordRu).Split(separator,StringSplitOptions.RemoveEmptyEntries);
-                   foreach (string word in definitions)
+                    string[] separator = {",", " ", "particle \"", "частица \"", "\""};
+                    string[] definitions =
+                        (currentWord.wordEn + " " + currentWord.wordRu).Split(separator, StringSplitOptions.RemoveEmptyEntries);
+                    foreach (string word in definitions)
                     {
                         if (conflword.Contains(word))
                         {
@@ -160,16 +167,16 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
                         }
                     }
 
-                   string rah_word =conflword.raharr;
-                   if (displayInEnglish)
-                   {
-                       rah_word =Program.thisProgram.Transcriptize(rah_word);
-                   }
+                    string rah_word = conflword.raharr;
+                    if (displayInEnglish)
+                    {
+                        rah_word = Program.thisProgram.Transcriptize(rah_word);
+                    }
 
-                   if (def)
-                       conflictLabel.Text = "Conflict with №"+dupIndex+" "+rah_word+": Definition";
-                   else
-                       conflictLabel.Text = "Conflict with №"+dupIndex+" "+rah_word+": Word";
+                    if (def)
+                        conflictLabel.Text = "Conflict with №" + dupIndex + " " + rah_word + ": Definition";
+                    else
+                        conflictLabel.Text = "Conflict with №" + dupIndex + " " + rah_word + ": Word";
                 }
                 else
                 {
@@ -194,6 +201,25 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
             }
         }
 
+        private void OutputSelectionChanged()
+        {
+            int pos = outputTextField.SelectionStart;
+            if (Program.thisProgram.translationIndexes != null)
+            {
+                
+                    int wordPos = outputTextField.Text.Substring(0, pos).Split().Length;
+                    foreach (KeyValuePair<int, int> valuePair in Program.thisProgram.translationIndexes)
+                    {
+                        if (valuePair.Key == wordPos)
+                        {
+                            wordsList.SelectedIndex = valuePair.Value;
+                            wordsList.Refresh();
+                            UpdateWordsListSelection();
+                            break;
+                        }
+                    }
+            }
+        }
 
         private void curWordAlienField_TextChanged(object sender, EventArgs e)
         {
@@ -366,6 +392,21 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
         {
             int newitemHeight = (curwinHeight-offset);
             obj.Size = new Size(obj.Size.Width, newitemHeight);
+        }
+        
+        private void outputTextField_SelectionChangedArgs(object sender, EventArgs e)
+        {
+            OutputSelectionChanged();
+        }
+
+        private void outputTextField_MouseClick(object sender, MouseEventArgs e)
+        {
+            OutputSelectionChanged();
+        }
+
+        private void outputTextField_KeyUp(object sender, KeyEventArgs e)
+        {
+            OutputSelectionChanged();
         }
     }
 }

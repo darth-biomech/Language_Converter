@@ -17,6 +17,23 @@ namespace Language_Converter
         public string wordEn;
         public string raharr;
         public int index;
+        
+        private static string[] ending4 = new[] {
+            "tion","ance","ence","ment","ness","ship","sion","able","ible","ical","ious","less"
+        };
+        private static string[] ending3 = new[] {
+            "ing","acy","dom","ism","ist","ity","ate","ify","ize","ise","ful","ous","ish","ive",
+            "ила","или","ями","ами","ими","ыми","ого","его","ому","ему", "ешь","ете","ишь","ите" 
+        };
+        private static string[] ending2 = new[] {
+            "ed","al","er","or","ty","en","fy","al","ic",
+            "ов","ам","ям","ах","ях","ая","яя","ий","ый","ую","юю","ое","ее","ие","ые","им","ым","ой",
+            "ей","ом","ем","их","ых","ет","ут","ит","ат","ят" 
+        };
+        private static string[] ending1 = new[] {
+            "s","y",
+            "а","я","ы","и","е","о","у","ю","ь"
+        };
 
         public DictionaryWord(string _wordRu, string _wordEn, string _raharr, int _index)
         {
@@ -28,14 +45,47 @@ namespace Language_Converter
 
         public bool Contains(string word)
         {
-            bool yes = false;
+            bool result = false;
             if (word != string.Empty)
             {
                 string pattern = @"\b" + word + @"\b";
                 Regex re = new Regex(pattern,RegexOptions.IgnoreCase);
-                yes = re.IsMatch(wordEn) || re.IsMatch(wordRu);
+                result = re.IsMatch(wordEn) || re.IsMatch(wordRu);
+                //if not found, try variations
+                if (!result)
+                {
+                    word = TryRemoveSuffixes(word);
+                    pattern = @"\b" + word + @"\b";
+                    re = new Regex(pattern,RegexOptions.IgnoreCase);
+                    result = re.IsMatch(wordEn) || re.IsMatch(FixRussianDef(wordRu));
+                }
             }
-            return yes;
+            return result;
+        }
+
+        private static string FixRussianDef(string def)
+        {
+            string[] words = def.Split();
+            string result = "";
+            for (int i = 0; i < words.Length; i++)
+            {
+                result += TryRemoveSuffixes(words[i]) + ", ";
+            }
+
+            return result;
+        }
+        private static string TryRemoveSuffixes(string word)
+        {
+            
+            if (word.Length >5 && word.TestEnding(ending4))
+                word = word.Substring(0, word.Length - 4);
+            else if (word.Length >4 && word.TestEnding(ending3))
+                word = word.Substring(0, word.Length - 3);
+            else if (word.Length >3 && word.TestEnding(ending2))
+                word = word.Substring(0, word.Length - 2);
+            else if (word.Length >2 && word.TestEnding(ending1))
+                word = word.Substring(0, word.Length - 1);
+            return word;
         }
     }
     static class Program
@@ -62,6 +112,19 @@ namespace Language_Converter
             thisProgram.Start();
             Application.Run(guiForm);
         }
+
+        public static bool TestEnding(this string a, string[] b)
+        {
+            if(a != String.Empty && b.Length > 0)
+            {
+                a = a.ToLower();
+                foreach (string s in b)
+                {
+                    if (a.EndsWith(s)) return true;
+                }
+            }
+            return false;
+        }
     }
 
     public static class Globals
@@ -80,6 +143,7 @@ namespace Language_Converter
         public int winHeight = 550;
         public int winWidth = 1140;
 
+        public Dictionary<int, int> translationIndexes;
         public void Start()
         {
             LoadSettings();
@@ -177,7 +241,6 @@ namespace Language_Converter
             LoadSettings();
             return pathToDictionary;
         }
-
         public void SaveSettings()
         {
             _settingsIni.Write("PathToDictionary", pathToDictionary, "Dictionary");
@@ -290,23 +353,26 @@ namespace Language_Converter
         public string BeginConversion(string inputText,bool formatRaharr)
         {
             string text = inputText;
-            
-            if (inputText != string.Empty)
+            translationIndexes = new Dictionary<int, int>();
+            if (text != string.Empty)
             {
                 string regPattern = @"[.,<>{}!@#$%^&*()_+=\-\'\`\~|\/\\ 	:0-9;]";
+                string fixedInput = Regex.Replace(text, regPattern, " ");
+                string[] wordArray = fixedInput.Split();
                 
-                var fixedInput = Regex.Replace(text, regPattern, " ");
-                string[] brokenText = fixedInput.Split();
-                foreach (string word in brokenText)
+                foreach (string word in wordArray)
                 {
                     if (word != string.Empty)
                     {
-                        Console.WriteLine(word);
                         foreach (DictionaryWord dictWord in Globals.wordsArray)
                         {
                             if (dictWord.Contains(word))
                             {
                                 string replPattern = @"\b" + word + @"\b";
+                                int wordPos = text.IndexOf(word, StringComparison.OrdinalIgnoreCase);
+                                if(wordPos >= 0)
+                                    wordPos = text.Substring(0, wordPos).Split().Length;
+                                translationIndexes.Add(wordPos,dictWord.index);
                                 text = Regex.Replace(text, replPattern, dictWord.raharr);
                             }
                         }

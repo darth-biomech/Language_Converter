@@ -6,14 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="d97d6cdd-f0fd-4d7a-94f5-4a8789893d22" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Language_Converter/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Language_Converter/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/Language_Converter.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/Language_Converter.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/Form1.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Language_Converter/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/Form1.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Language_Converter.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/bin/Release/Settings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/bin/Release/Settings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Language_Converter/obj/Release/Language_Converter.pdb" afterDir="false" />
@@ -27,7 +25,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/32/0f132033/File.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/9b25e913d31d4b8b83ebde8a2012e613286680/9a/6da73cb4/XmlTextReaderImpl.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4a9734e546e145449978ddad3be06e1e5a5d40/56/4263bfae/Application.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/edef46c9b2db4b878c98495bfdc516fa568ba8/f5/1ea1f600/String.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -84,6 +81,7 @@
       <workItem from="1656090019094" duration="5830000" />
       <workItem from="1656090120219" duration="582000" />
       <workItem from="1656090033688" duration="13735000" />
+      <workItem from="1656090032390" duration="11913000" />
     </task>
     <servers />
   </component>
