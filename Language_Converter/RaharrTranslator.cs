@@ -501,7 +501,8 @@ namespace Language_Converter
     {
         public static string separator = "--------------------------------------------------------------------------------------------------------------------------------";
         private static string[] ending4 = new[] {
-            "tion","ance","ence","ment","ness","ship","sion","able","ible","ical","ious","less"
+            "tion","ance","ence","ment","ness","ship","sion","able","ible","ical","ious","less",
+            "ость","ости",
         };
         private static string[] ending3 = new[] {
             "ing","acy","dom","ism","ist","ity","ate","ify","ize","ise","ful","ous","ish","ive",
