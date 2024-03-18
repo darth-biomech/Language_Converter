@@ -340,6 +340,7 @@
             // 
             this.languageSelectionBox.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.languageSelectionBox.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (9)))), ((int) (((byte) (64)))), ((int) (((byte) (104)))));
+            this.languageSelectionBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.languageSelectionBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.languageSelectionBox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.languageSelectionBox.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (148)))), ((int) (((byte) (214)))), ((int) (((byte) (250)))));
@@ -350,7 +351,6 @@
             this.languageSelectionBox.Name = "languageSelectionBox";
             this.languageSelectionBox.Size = new System.Drawing.Size(132, 24);
             this.languageSelectionBox.TabIndex = 32;
-            this.languageSelectionBox.Text = "Russian";
             this.languageSelectionBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // wikiFormatCheck
