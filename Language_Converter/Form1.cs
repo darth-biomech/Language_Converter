@@ -10,6 +10,7 @@ namespace Language_Converter
 {
     public partial class Form1 : Form
     {
+        
         private PrivateFontCollection pfc = new PrivateFontCollection();
         private DictionaryWord currentWord = new DictionaryWord("NaN","NaN","NaN",-1);
         private bool wordIsModified;
@@ -70,8 +71,8 @@ namespace Language_Converter
             SwitchButtonsEditedWord(false);
             foreach (DictionaryWord word in Globals.wordsArray)
             {
-                if (word.raharr == "-------------")
-                    wordsList.Items.Add("---------------------------------------");
+                if (word.IsSeparator())
+                    wordsList.Items.Add(DictionaryWord.separator);
                 else
                 {
                     string rahword =  word.raharr;
@@ -95,6 +96,8 @@ namespace Language_Converter
                     }
 
                     string numspace = " ";
+                    if (word.index < 1000)
+                        numspace += " ";
                     if (word.index < 100)
                         numspace += " ";
                     if (word.index < 10)
@@ -145,10 +148,30 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
             if (!wordIsModified)
             {
                 currentWord = Program.thisProgram.FindWord(wordsList.SelectedIndex);
-                curWordAlienField.Text = currentWord.raharr;
-                curWordMEnField.Text = currentWord.wordEn;
-                curWordMRuField.Text = currentWord.wordRu;
+                if (currentWord.IsSeparator())
+                {
+                    butEditWord.Enabled = false;
+                    button1.Enabled = false;
+                    curWordAlienField.Enabled = false;
+                    curWordMEnField.Enabled = false;
+                    curWordMRuField.Enabled = false;
+                    curWordAlienField.Text = "";
+                    curWordMEnField.Text = "";
+                    curWordMRuField.Text = "";
+                    wordnumber.Text = "";
+                }
+                else
+                {
+                    curWordAlienField.Text = currentWord.raharr;
+                    curWordMEnField.Text = currentWord.wordEn;
+                    curWordMRuField.Text = currentWord.wordRu;
+                    butEditWord.Enabled = true;
+                    button1.Enabled = true;
+                    curWordAlienField.Enabled = true;
+                    curWordMEnField.Enabled = true;
+                    curWordMRuField.Enabled = true;
                 wordnumber.Text = currentWord.index.ToString();
+                }
                 SwitchButtonsEditedWord(false);
                 int dupIndex = Program.thisProgram.HasDuplicate(currentWord);
                 if (dupIndex != -1)
@@ -174,9 +197,9 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
                     }
 
                     if (def)
-                        conflictLabel.Text = "Conflict with №" + dupIndex + " " + rah_word + ": Definition";
+                        conflictLabel.Text = "Conflict with №" + dupIndex + " \"" + rah_word + "\" : Definition";
                     else
-                        conflictLabel.Text = "Conflict with №" + dupIndex + " " + rah_word + ": Word";
+                        conflictLabel.Text = "Conflict with №" + dupIndex + " \"" + rah_word + "\" : Word";
                 }
                 else
                 {
@@ -185,20 +208,6 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
             }
             else wordsList.SelectedIndex = currentWord.index;
 
-            if (currentWord.raharr == "-------------")
-            {
-                butEditWord.Enabled = false;
-                curWordAlienField.Enabled = false;
-                curWordMEnField.Enabled = false;
-                curWordMRuField.Enabled = false;
-            }
-            else
-            {
-                butEditWord.Enabled = true;
-                curWordAlienField.Enabled = true;
-                curWordMEnField.Enabled = true;
-                curWordMRuField.Enabled = true;
-            }
         }
 
         private void OutputSelectionChanged()
@@ -276,7 +285,7 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
         private void buttonAddDivider_Click(object sender, EventArgs e)
         {
             int tempIndex = wordsList.SelectedIndex;
-            DictionaryWord tempWord = new DictionaryWord("-------------", "-------------", "-------------", currentWord.index + 1);
+            DictionaryWord tempWord = DictionaryWord.Separator(currentWord.index + 1);
             Program.thisProgram.AddWord(tempWord);
             buttonSaveDictionary.Enabled = true;
             PopulateDictionaryList(tempIndex);
@@ -341,7 +350,7 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedIndex == 0)
+            if (languageSelectionBox.SelectedIndex == 0)
                 displayInEnglish = false;
             else 
                 displayInEnglish = true;
@@ -377,7 +386,7 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
              wordsList.Width = curwinWidth - wordsList.Location.X -20;
              rightPanel.Width = curwinWidth - wordsList.Location.X -20;
              topPanel.Width = secondRowLoc -30;
-             DicPathString.Width = secondRowLoc - buttonSaveDictionary.Width - buttonOpenDic.Width - 50;
+             DicPathString.Width = secondRowLoc - buttonSaveDictionary.Width - buttonOpenDic.Width - 55;
              int textfieldsheight = (curwinHeight-228)/2;
              midPanel.Location = new Point(midPanel.Location.X, textfieldsheight + 90);
              midPanel.Width = topPanel.Width;

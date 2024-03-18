@@ -14,11 +14,7 @@ namespace Language_Converter
 
     public struct DictionaryWord
     {
-        public string wordRu;
-        public string wordEn;
-        public string raharr;
-        public int index;
-        
+        public static string separator = "--------------------------------------------------------------------------------------------------------------------------------";
         private static string[] ending4 = new[] {
             "tion","ance","ence","ment","ness","ship","sion","able","ible","ical","ious","less"
         };
@@ -35,6 +31,11 @@ namespace Language_Converter
             "s","y",
             "а","я","ы","и","е","о","у","ю","ь"
         };
+        public string wordRu;
+        public string wordEn;
+        public string raharr;
+        public int index;
+        
 
         public DictionaryWord(string _wordRu, string _wordEn, string _raharr, int _index)
         {
@@ -43,6 +44,14 @@ namespace Language_Converter
             this.raharr = _raharr;
             this.index = _index;
         }
+        public DictionaryWord(string _raharr, int _index)
+        {
+            this.wordRu = _raharr;
+            this.wordEn = Program.thisProgram.Transcriptize(_raharr);
+            this.raharr = _raharr;
+            this.index = _index;
+        }
+        public static DictionaryWord Separator(int i) => new DictionaryWord(separator, i);
 
         public bool Contains(string word)
         {
@@ -88,6 +97,8 @@ namespace Language_Converter
                 word = word.Substring(0, word.Length - 1);
             return word;
         }
+
+        public bool IsSeparator() { return raharr.Contains("----"); }
     }
     static class Program
     {
@@ -224,13 +235,7 @@ namespace Language_Converter
                         }
                         else
                         {
-                            DictionaryWord curWord = new DictionaryWord
-                            (
-                                "-------------",
-                                "-------------",
-                                "-------------",
-                                wordIndex
-                            );
+                            DictionaryWord curWord = DictionaryWord.Separator(wordIndex);
                             Globals.wordsArray.Add(curWord);
                         }
                     }
@@ -372,8 +377,9 @@ namespace Language_Converter
                                 string replPattern = @"\b" + word + @"\b";
                                 int wordPos = text.IndexOf(word, StringComparison.OrdinalIgnoreCase);
                                 if(wordPos >= 0)
-                                    wordPos = text.Substring(0, wordPos).Split().Length;
-                                translationIndexes.Add(wordPos,dictWord.index);
+                                    wordPos = text.Substring(0, Math.Min(text.Length,wordPos+1)).Split().Length;
+                                if (!translationIndexes.ContainsKey(wordPos))
+                                    translationIndexes.Add(wordPos,dictWord.index);
                                 text = Regex.Replace(text, replPattern, dictWord.raharr);
                             }
                         }
@@ -432,7 +438,7 @@ namespace Language_Converter
             foreach (DictionaryWord word in Globals.wordsArray)
             {
                 string curCell;
-                if (word.raharr == "-------------")
+                if (word.IsSeparator())
                 {
                     if (firstBit && wikiFormat)
                     {
@@ -464,6 +470,8 @@ namespace Language_Converter
         public int HasDuplicate(DictionaryWord word)
         {
             int result = -1;
+            if (word.IsSeparator()) 
+                return result;
             foreach (DictionaryWord wordMatch in Globals.wordsArray)
             {
                 if (word.raharr == wordMatch.raharr && word.index != wordMatch.index)
