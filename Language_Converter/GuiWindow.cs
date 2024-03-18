@@ -4,45 +4,79 @@ using System.Drawing;
 using System.Linq;
 using System.Drawing.Text;
 using System.IO;
+using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace Language_Converter
 {
-    public partial class Form1 : Form
+    public partial class GUI : Form
     {
-        
-        private PrivateFontCollection pfc = new PrivateFontCollection();
+        private PrivateFontCollection raharrFont= new PrivateFontCollection();
         private DictionaryWord currentWord = new DictionaryWord("NaN","NaN","NaN",-1);
         private bool wordIsModified;
-        private bool displayInEnglish;
-        int curwinHeight = 100;
-        int curwinWidth = 100;  
-        public Form1()
+      //  private bool displayInEnglish;
+        private int winHeight = 100;
+        private int winWidth = 100;
+
+        public GUI()
         {
             InitializeComponent();
-            DicPathString.Text = Program.thisProgram.GetDictionaryPath();
-            replaceLettersCheckbox.Checked = Program.thisProgram.replLetters;
-            saveCopyCheckbox.Checked = Program.thisProgram.saveCopy;
-            this.Size = new Size(Program.thisProgram.winWidth, Program.thisProgram.winHeight);
+            DicPathString.Text = Program.instance.GetDictionaryPath();
+            replaceLettersCheckbox.Checked = Program.instance.replLetters;
+            saveCopyCheckbox.Checked = Program.instance.saveCopy;
+            languageSelectionBox.SelectedIndex = Program.instance.displayInEnglish ? 1 : 0;
+            this.Size = new Size(Program.instance.winWidth, Program.instance.winHeight);
             ResizeAll();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void GUI_Load(object sender, EventArgs e)
         {
-            Stream fontStream = this.GetType().Assembly.GetManifestResourceStream("Language_Converter.raharr_new.ttf");
+            InitFont();
+        }
+        
+        [DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont, IntPtr pdv, [In] ref uint pcFonts);
+
+        private void InitFont()
+        {
+            if(raharrFont == null)
+                raharrFont = new PrivateFontCollection();
+            // specify embedded resource name
+            string resource = "Language_Converter.raharr_new.ttf";
+            // receive resource stream
+            Stream fontStream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resource);
+
+            // create an unsafe memory block for the font data
+            IntPtr data = Marshal.AllocCoTaskMem((int) fontStream.Length);
+
+            // create a buffer to read in to
             byte[] fontdata = new byte[fontStream.Length];
-            fontStream.Read(fontdata, 0, (int)fontStream.Length);
+
+            // read the font data from the resource
+            fontStream.Read(fontdata, 0, (int) fontStream.Length);
+
+            // copy the bytes to the unsafe memory block
+            Marshal.Copy(fontdata, 0, data, (int) fontStream.Length);
+
+            // pass the font to the font collection
+            raharrFont.AddMemoryFont(data, (int) fontStream.Length);
+            uint installCount=1;
+            AddFontMemResourceEx(data, (uint)fontStream.Length, IntPtr.Zero, ref installCount);
+            // close the resource stream
             fontStream.Close();
 
-            unsafe
-            {
-                fixed (byte* pFontData = fontdata)
-                {
-                    pfc.AddMemoryFont((System.IntPtr)pFontData, fontdata.Length);
-                }
-            }
+            // free up the unsafe memory
+            Marshal.FreeCoTaskMem(data);
+            
+            
         }
 
+        private Font Raharr()
+        {
+            return new Font(raharrFont.Families.Where(x => x.Name == "Raharr_new").FirstOrDefault(), 11,FontStyle.Regular);
+        }
+        
         private void buttonOpenDic_Click(object sender, EventArgs e)
         {
             OpenDictionaryDialog.Filter = @"txt files (*.txt)|*.txt|htm files (*.htm)|*.htm|html files (*.html)|*.html";
@@ -60,7 +94,7 @@ namespace Language_Converter
             {
                 //Get the path of specified file
                 DicPathString.Text = OpenDictionaryDialog.FileName;
-                Program.thisProgram.LoadDictionary(OpenDictionaryDialog.FileName);
+                Program.instance.LoadDictionary(OpenDictionaryDialog.FileName);
                 PopulateDictionaryList();
             }
         }
@@ -69,7 +103,7 @@ namespace Language_Converter
         {
             wordsList.Items.Clear();
             SwitchButtonsEditedWord(false);
-            foreach (DictionaryWord word in Globals.wordsArray)
+            foreach (DictionaryWord word in RaharrTranslator.wordsArray)
             {
                 if (word.IsSeparator())
                     wordsList.Items.Add(DictionaryWord.separator);
@@ -77,16 +111,16 @@ namespace Language_Converter
                 {
                     string rahword =  word.raharr;
                     string meaning = word.wordRu;
-                    if (displayInEnglish)
+                    if (Program.instance.displayInEnglish)
                     {
-                        rahword = Program.thisProgram.Transcriptize(rahword);
+                        rahword = Program.instance.Transcriptize(rahword);
                         meaning = word.wordEn;
                     }
 
                     string tabSpace = "";
                     if (rahword.Length < 11)
                         tabSpace = "                ".Substring(rahword.Length);
-                    if (Program.thisProgram.HasDuplicate(word) !=-1)
+                    if (Program.instance.HasDuplicate(word) !=-1)
                     {
                         rahword = "[D] "+rahword;
                     }
@@ -147,7 +181,7 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
         {
             if (!wordIsModified)
             {
-                currentWord = Program.thisProgram.FindWord(wordsList.SelectedIndex);
+                currentWord = Program.instance.FindWord(wordsList.SelectedIndex);
                 if (currentWord.IsSeparator())
                 {
                     butEditWord.Enabled = false;
@@ -173,11 +207,11 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
                 wordnumber.Text = currentWord.index.ToString();
                 }
                 SwitchButtonsEditedWord(false);
-                int dupIndex = Program.thisProgram.HasDuplicate(currentWord);
+                int dupIndex = Program.instance.HasDuplicate(currentWord);
                 if (dupIndex != -1)
                 {
                     bool def = false;
-                    DictionaryWord conflword = Program.thisProgram.FindWord(dupIndex);
+                    DictionaryWord conflword = Program.instance.FindWord(dupIndex);
                     string[] separator = {",", " ", "particle \"", "частица \"", "\""};
                     string[] definitions =
                         (currentWord.wordEn + " " + currentWord.wordRu).Split(separator, StringSplitOptions.RemoveEmptyEntries);
@@ -191,9 +225,9 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
                     }
 
                     string rah_word = conflword.raharr;
-                    if (displayInEnglish)
+                    if (Program.instance.displayInEnglish)
                     {
-                        rah_word = Program.thisProgram.Transcriptize(rah_word);
+                        rah_word = Program.instance.Transcriptize(rah_word);
                     }
 
                     if (def)
@@ -213,11 +247,11 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
         private void OutputSelectionChanged()
         {
             int pos = outputTextField.SelectionStart;
-            if (Program.thisProgram.translationIndexes != null)
+            if (Program.instance.translationIndexes != null)
             {
                 
                     int wordPos = outputTextField.Text.Substring(0, pos).Split().Length;
-                    foreach (KeyValuePair<int, int> valuePair in Program.thisProgram.translationIndexes)
+                    foreach (KeyValuePair<int, int> valuePair in Program.instance.translationIndexes)
                     {
                         if (valuePair.Key == wordPos)
                         {
@@ -264,7 +298,7 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
         private void butEditWord_Click(object sender, EventArgs e)
         {
             SwitchButtonsEditedWord(false);
-            Program.thisProgram.ChangeWord(currentWord);
+            Program.instance.ChangeWord(currentWord);
             buttonSaveDictionary.Enabled = true;
         }
         private void buttAddWord_Click(object sender, EventArgs e)
@@ -279,39 +313,39 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
                 tempWord = new DictionaryWord(currentWord.wordRu, currentWord.wordEn, currentWord.raharr, currentWord.index + 1);
             }
 
-            Program.thisProgram.AddWord(tempWord);
+            Program.instance.AddWord(tempWord);
             buttonSaveDictionary.Enabled = true;
         }
         private void buttonAddDivider_Click(object sender, EventArgs e)
         {
             int tempIndex = wordsList.SelectedIndex;
             DictionaryWord tempWord = DictionaryWord.Separator(currentWord.index + 1);
-            Program.thisProgram.AddWord(tempWord);
+            Program.instance.AddWord(tempWord);
             buttonSaveDictionary.Enabled = true;
             PopulateDictionaryList(tempIndex);
         }
         private void startConversionBtn_Click(object sender, EventArgs e)
         {
-            if (displayInEnglish)
-                outputTextField.Text = Program.thisProgram.Transcriptize(Program.thisProgram.BeginConversion(inputTextField.Text,replaceLettersCheckbox.Checked));
+            if (Program.instance.displayInEnglish)
+                outputTextField.Text = Program.instance.Transcriptize(Program.instance.BeginConversion(inputTextField.Text,replaceLettersCheckbox.Checked));
             else
-                outputTextField.Text = Program.thisProgram.BeginConversion(inputTextField.Text,replaceLettersCheckbox.Checked);
+                outputTextField.Text = Program.instance.BeginConversion(inputTextField.Text,replaceLettersCheckbox.Checked);
         }
 
         private void buttonSaveDictionary_Click(object sender, EventArgs e)
         {
-            Program.thisProgram.ExportDictionary(DicPathString.Text,saveCopyCheckbox.Checked);
+            Program.instance.ExportDictionary(DicPathString.Text,saveCopyCheckbox.Checked);
             buttonSaveDictionary.Enabled = false;
         }
 
         private void replaceLettersCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-            Program.thisProgram.replLetters = replaceLettersCheckbox.Checked;
+            Program.instance.replLetters = replaceLettersCheckbox.Checked;
         }
 
         private void saveCopyCheckbox_CheckedChanged(object sender, EventArgs e)
         {
-            Program.thisProgram.saveCopy = saveCopyCheckbox.Checked;
+            Program.instance.saveCopy = saveCopyCheckbox.Checked;
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -325,25 +359,25 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
                 e.Cancel = (window == DialogResult.No);
             }
 
-            Program.thisProgram.SaveSettings();
+            Program.instance.SaveSettings();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
             {
-                outputTextField.Font = new Font(pfc.Families[0], 11,FontStyle.Regular);
-                if (displayInEnglish)
+                outputTextField.Font = Raharr();
+                if (Program.instance.displayInEnglish)
                     if (inputTextField.Text.Length > 1)
-                        outputTextField.Text = Program.thisProgram.BeginConversion(inputTextField.Text,replaceLettersCheckbox.Checked);
+                        outputTextField.Text = Program.instance.BeginConversion(inputTextField.Text,replaceLettersCheckbox.Checked);
  
             }
             else
             {
                 outputTextField.Font = new Font("Arial", 10,FontStyle.Regular);
-                if (displayInEnglish)
+                if (Program.instance.displayInEnglish)
                     if (inputTextField.Text.Length > 1)
-                        outputTextField.Text = Program.thisProgram.Transcriptize(Program.thisProgram.BeginConversion(inputTextField.Text,replaceLettersCheckbox.Checked));
+                        outputTextField.Text = Program.instance.Transcriptize(Program.instance.BeginConversion(inputTextField.Text,replaceLettersCheckbox.Checked));
 
             }
         }
@@ -351,43 +385,43 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (languageSelectionBox.SelectedIndex == 0)
-                displayInEnglish = false;
+                Program.instance.displayInEnglish = false;
             else 
-                displayInEnglish = true;
+                Program.instance.displayInEnglish = true;
             PopulateDictionaryList(currentWord.index);
             if (inputTextField.Text.Length > 1)
-                if (!displayInEnglish)
-                    outputTextField.Text = Program.thisProgram.BeginConversion(inputTextField.Text,replaceLettersCheckbox.Checked);
+                if (!Program.instance.displayInEnglish)
+                    outputTextField.Text = Program.instance.BeginConversion(inputTextField.Text,replaceLettersCheckbox.Checked);
                 else if (!checkBox1.Checked)
-                    outputTextField.Text = Program.thisProgram.Transcriptize(Program.thisProgram.BeginConversion(inputTextField.Text,replaceLettersCheckbox.Checked));
+                    outputTextField.Text = Program.instance.Transcriptize(Program.instance.BeginConversion(inputTextField.Text,replaceLettersCheckbox.Checked));
 
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            Program.thisProgram.wikiFormat = checkBox2.Checked;
+            Program.instance.wikiFormat = checkBox2.Checked;
         }
 
         private void Form1_Resize(object sender, EventArgs e)
         {
-            Program.thisProgram.winHeight = this.Height;
-            Program.thisProgram.winWidth = this.Width;
+            Program.instance.winHeight = this.Height;
+            Program.instance.winWidth = this.Width;
              ResizeAll();
         }
 
         private void ResizeAll()
         {
-            curwinHeight = Program.thisProgram.winHeight;
-            curwinWidth = Program.thisProgram.winWidth;
+            winHeight = Program.instance.winHeight;
+            winWidth = Program.instance.winWidth;
              ResizeForm(wordsList,258);
-             int secondRowLoc = (int)(curwinWidth / 1.8);
+             int secondRowLoc = (int)(winWidth / 1.8);
              wordsList.Left = secondRowLoc;
              rightPanel.Left = secondRowLoc;
-             wordsList.Width = curwinWidth - wordsList.Location.X -20;
-             rightPanel.Width = curwinWidth - wordsList.Location.X -20;
+             wordsList.Width = winWidth - wordsList.Location.X -20;
+             rightPanel.Width = winWidth - wordsList.Location.X -20;
              topPanel.Width = secondRowLoc -30;
              DicPathString.Width = secondRowLoc - buttonSaveDictionary.Width - buttonOpenDic.Width - 55;
-             int textfieldsheight = (curwinHeight-228)/2;
+             int textfieldsheight = (winHeight-228)/2;
              midPanel.Location = new Point(midPanel.Location.X, textfieldsheight + 90);
              midPanel.Width = topPanel.Width;
              
@@ -399,7 +433,7 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
         }
         private void ResizeForm(Control obj, int offset)
         {
-            int newitemHeight = (curwinHeight-offset);
+            int newitemHeight = (winHeight-offset);
             obj.Size = new Size(obj.Size.Width, newitemHeight);
         }
         

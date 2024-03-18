@@ -1,6 +1,6 @@
 ﻿namespace Language_Converter
 {
-    partial class Form1
+    partial class GUI
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI));
             this.DicPathString = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.OpenDictionaryDialog = new System.Windows.Forms.OpenFileDialog();
@@ -486,10 +486,10 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1879, 1671);
             this.MinimumSize = new System.Drawing.Size(754, 292);
-            this.Name = "Form1";
+            this.Name = "GUI";
             this.Text = "Language Converter";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.GUI_Load);
             this.Resize += new System.EventHandler(this.Form1_Resize);
             this.midPanel.ResumeLayout(false);
             this.topPanel.ResumeLayout(false);

@@ -12,9 +12,9 @@ Q:\!Raharrs_and_all_about\Language_tools\Language_Converter\Language_Converter\b
 Q:\!Raharrs_and_all_about\Language_tools\Language_Converter\Language_Converter\bin\Release\Language_Converter.exe
 Q:\!Raharrs_and_all_about\Language_tools\Language_Converter\Language_Converter\bin\Release\Language_Converter.pdb
 Q:\!Raharrs_and_all_about\Language_tools\Language_Converter\Language_Converter\obj\Release\Language_Converter.csproj.AssemblyReference.cache
-Q:\!Raharrs_and_all_about\Language_tools\Language_Converter\Language_Converter\obj\Release\Language_Converter.Form1.resources
 Q:\!Raharrs_and_all_about\Language_tools\Language_Converter\Language_Converter\obj\Release\Language_Converter.Properties.Resources.resources
 Q:\!Raharrs_and_all_about\Language_tools\Language_Converter\Language_Converter\obj\Release\Language_Converter.csproj.GenerateResource.cache
 Q:\!Raharrs_and_all_about\Language_tools\Language_Converter\Language_Converter\obj\Release\Language_Converter.csproj.CoreCompileInputs.cache
 Q:\!Raharrs_and_all_about\Language_tools\Language_Converter\Language_Converter\obj\Release\Language_Converter.exe
 Q:\!Raharrs_and_all_about\Language_tools\Language_Converter\Language_Converter\obj\Release\Language_Converter.pdb
+Q:\!Raharrs_and_all_about\Language_tools\Language_Converter\Language_Converter\obj\Release\Language_Converter.GUI.resources
