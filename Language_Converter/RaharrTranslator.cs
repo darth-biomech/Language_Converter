@@ -510,7 +510,7 @@ namespace Language_Converter
         private static string[] ending2 = new[] {
             "ed","al","er","or","ty","en","fy","al","ic",
             "ов","ам","ям","ах","ях","ая","яя","ий","ый","ую","юю","ое","ее","ие","ые","им","ым","ой",
-            "ей","ом","ем","их","ых","ет","ут","ит","ат","ят" 
+            "ей","ом","ем","их","ых","ет","ут","ит","ат","ят","ть","ял","ал"
         };
         private static string[] ending1 = new[] {
             "s","y",
@@ -543,6 +543,7 @@ namespace Language_Converter
             bool result = false;
             if (word != string.Empty)
             {
+                if (word.ToLower().Split('\'')[0] == "i") word = "myself";
                 string pattern = @"\b" + word + @"\b";
                 Regex re = new Regex(pattern,RegexOptions.IgnoreCase);
                 result = re.IsMatch(wordEn) || re.IsMatch(wordRu);
@@ -554,6 +555,8 @@ namespace Language_Converter
                     re = new Regex(pattern,RegexOptions.IgnoreCase);
                     result = re.IsMatch(wordEn) || re.IsMatch(FixRussianDef(wordRu));
                 }
+                if (result && word.Length == 1)
+                    result = word.ToLower() == "я" || wordRu.Contains("частица");
             }
             return result;
         }
