@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Xml.Linq;
@@ -42,6 +43,40 @@ namespace Language_Converter
             {
                 wordDictionary = File.ReadAllText(pathToDictionary);
                 SplitDictionary();
+            }
+            else LoadDictionaryWeb();
+        }
+        public void LoadDictionaryWeb()
+        {
+            
+            WebRequest req = HttpWebRequest.Create("https://wiki.leavingthecradle.com/wiki/Template:Dictionary");
+            req.Method = "GET";
+
+            string htmlCode;
+            using (StreamReader reader = new StreamReader(req.GetResponse().GetResponseStream()))
+            {
+                htmlCode = reader.ReadToEnd();
+            }
+            if (htmlCode.Contains("<h1 id=\"firstHeading\" class=\"firstHeading\" >Template:Dictionary</h1>"))
+            {
+                wordDictionary = "<table>"+htmlCode.Substring(htmlCode.IndexOf("<tbody>")).Substring(7);
+                wordDictionary = wordDictionary.Remove(wordDictionary.IndexOf("</tbody>")) + "</table>";
+                SplitDictionary();
+                pathToDictionary = "Raharr_Dictionary(Local_Copy).txt";
+                saveCopy = false;
+                wikiFormat = true;
+                Program.gui.buttonSaveDictionary.Enabled = true;
+                Program.gui.DicPathString.Text = pathToDictionary;
+                Program.gui.saveCopyCheckbox.Checked = saveCopy;
+                Program.gui.wikiFormatCheck.Checked = wikiFormat;
+                MessageBox.Show(
+                    "Local dictionary file wasn't found,\n\n successfully loaded one from the Leaving The Cradle Wiki.",
+                    "Dictionary was downloaded",
+                    MessageBoxButtons.OK);
+            }
+            else
+            {
+                
             }
         }
         public void LoadDictionary(string newPath)

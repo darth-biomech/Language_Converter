@@ -53,7 +53,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.languageSelectionBox = new System.Windows.Forms.ComboBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.wikiFormatCheck = new System.Windows.Forms.CheckBox();
             this.midPanel = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -336,21 +336,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.buttonAddDivider_Click);
             // 
-            // checkBox2
-            // 
-            this.checkBox2.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox2.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.checkBox2.Location = new System.Drawing.Point(406, 56);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(81, 20);
-            this.checkBox2.TabIndex = 27;
-            this.checkBox2.Text = "Wiki format";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
-            // 
             // languageSelectionBox
             // 
             this.languageSelectionBox.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -367,6 +352,21 @@
             this.languageSelectionBox.TabIndex = 32;
             this.languageSelectionBox.Text = "Russian";
             this.languageSelectionBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // wikiFormatCheck
+            // 
+            this.wikiFormatCheck.Anchor = ((System.Windows.Forms.AnchorStyles) ((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.wikiFormatCheck.Checked = true;
+            this.wikiFormatCheck.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.wikiFormatCheck.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.wikiFormatCheck.Location = new System.Drawing.Point(406, 56);
+            this.wikiFormatCheck.Margin = new System.Windows.Forms.Padding(2);
+            this.wikiFormatCheck.Name = "wikiFormatCheck";
+            this.wikiFormatCheck.Size = new System.Drawing.Size(81, 20);
+            this.wikiFormatCheck.TabIndex = 27;
+            this.wikiFormatCheck.Text = "Wiki format";
+            this.wikiFormatCheck.UseVisualStyleBackColor = true;
+            this.wikiFormatCheck.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // midPanel
             // 
@@ -405,7 +405,7 @@
             // 
             // topPanel
             // 
-            this.topPanel.Controls.Add(this.checkBox2);
+            this.topPanel.Controls.Add(this.wikiFormatCheck);
             this.topPanel.Controls.Add(this.saveCopyCheckbox);
             this.topPanel.Controls.Add(this.buttonSaveDictionary);
             this.topPanel.Controls.Add(this.label2);
@@ -468,7 +468,7 @@
             this.rightPanel.Size = new System.Drawing.Size(320, 210);
             this.rightPanel.TabIndex = 32;
             // 
-            // Form1
+            // GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -508,7 +508,7 @@
 
         private System.Windows.Forms.Panel midPanel;
 
-        private System.Windows.Forms.CheckBox checkBox2;
+        public System.Windows.Forms.CheckBox wikiFormatCheck;
 
         private System.Windows.Forms.ComboBox languageSelectionBox;
 
@@ -518,7 +518,7 @@
 
         private System.Windows.Forms.Label label7;
 
-        private System.Windows.Forms.CheckBox saveCopyCheckbox;
+        public System.Windows.Forms.CheckBox saveCopyCheckbox;
 
         private System.Windows.Forms.CheckBox replaceLettersCheckbox;
 
@@ -535,22 +535,22 @@
 
         private System.Windows.Forms.Button butAddWord;
 
-        private System.Windows.Forms.Button buttonSaveDictionary;
+        public System.Windows.Forms.Button buttonSaveDictionary;
 
         private System.Windows.Forms.ListBox wordsList;
 
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
 
-        private System.Windows.Forms.TextBox inputTextField;
+        public System.Windows.Forms.TextBox inputTextField;
         private System.Windows.Forms.Button startConversionBtn;
 
-        private System.Windows.Forms.TextBox outputTextField;
+        public System.Windows.Forms.TextBox outputTextField;
 
         private System.Windows.Forms.OpenFileDialog OpenDictionaryDialog;
         private System.Windows.Forms.Button buttonOpenDic;
 
-        private System.Windows.Forms.TextBox DicPathString;
+        public System.Windows.Forms.TextBox DicPathString;
         private System.Windows.Forms.Label label1;
 
         #endregion

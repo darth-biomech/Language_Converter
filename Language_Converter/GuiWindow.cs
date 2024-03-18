@@ -399,7 +399,7 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-            Program.instance.wikiFormat = checkBox2.Checked;
+            Program.instance.wikiFormat = wikiFormatCheck.Checked;
         }
 
         private void Form1_Resize(object sender, EventArgs e)
