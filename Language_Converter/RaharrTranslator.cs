@@ -419,10 +419,11 @@ namespace Language_Converter
             newWord.Clear();
             foreach (char c in inWord)
             {
-                newWord.Add(c.ToString());
+                newWord.Add(c.ToString().ToLower());
             }
             for (int i = 0; i < newWord.Count; i++)
             {
+                bool upper = Char.IsUpper(inWord[i]);
                 switch (newWord[i])
                 {
                     case "а" : 
@@ -492,6 +493,8 @@ namespace Language_Converter
                     case "я" : 
                         newWord[i] = "ya"; break;
                 }
+
+                if (upper) newWord[i] = newWord[i].ToUpper();
             }
             return  string.Join("", newWord);
         }
@@ -502,11 +505,11 @@ namespace Language_Converter
         public static string separator = "--------------------------------------------------------------------------------------------------------------------------------";
         private static string[] ending4 = new[] {
             "tion","ance","ence","ment","ness","ship","sion","able","ible","ical","ious","less",
-            "ость","ости",
+            "ость","ости","овал",
         };
         private static string[] ending3 = new[] {
             "ing","acy","dom","ism","ist","ity","ate","ify","ize","ise","ful","ous","ish","ive",
-            "ила","или","ями","ами","ими","ыми","ого","его","ому","ему", "ешь","ете","ишь","ите" 
+            "ила","или","ями","ами","ими","ыми","ого","его","ому","ему", "ешь","ете","ишь","ите","уют"
         };
         private static string[] ending2 = new[] {
             "ed","al","er","or","ty","en","fy","al","ic",
