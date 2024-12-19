@@ -257,7 +257,7 @@ namespace Language_Converter
         public DictionaryWord FindWord(int index)
         {
             DictionaryWord w = new DictionaryWord("NaN","NaN","NaN",-1);
-            foreach (DictionaryWord word in wordsArray)
+            foreach (DictionaryWord word in RaharrTranslator.wordsArray)
             {
                 if (word.index == index)
                 {
@@ -349,7 +349,7 @@ namespace Language_Converter
             
             foreach (DictionaryWord word in wordsArray)
             {
-                string curCell;
+                string curCell ="";
                 if (word.IsSeparator())
                 {
                     if (firstBit && wikiFormat)
@@ -360,7 +360,7 @@ namespace Language_Converter
                     else
                         curCell = "\n\t<tr>\n\t\t<td colspan = \"2\"> &nbsp; <br> </td>\n\t</tr>\n";
                 }
-                else
+                else if (word.wordRu != "" && word.wordEn != "" && word.raharr != "")
                 {
                     string wordBegin =          "\n\t<tr>\n";
                     string wordRu =             "\t\t<th"+wikiTableRu+">\t\t"+word.wordRu+" </th>\n";

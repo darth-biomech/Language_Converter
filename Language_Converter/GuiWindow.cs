@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Drawing.Text;
@@ -27,7 +28,48 @@ namespace Language_Converter
             saveCopyCheckbox.Checked = Program.instance.saveCopy;
             languageSelectionBox.SelectedIndex = Program.instance.displayInEnglish ? 1 : 0;
             this.Size = new Size(Program.instance.winWidth, Program.instance.winHeight);
+            wordsList.AllowDrop = true;
+            // Handle MouseDown event to start the drag operation
+            wordsList.MouseDown += (sender, e) =>
+            {
+                if (wordsList.SelectedItem == null) return;
+                if (wordsList.Items[wordsList.SelectedIndex].ToString() == DictionaryWord.separator) return;
+                wordsList.DoDragDrop(wordsList.SelectedItem, DragDropEffects.Move);
+            };
+
+            // Handle DragOver event to provide visual feedback
+            wordsList.DragOver += (sender, e) =>
+            {
+                e.Effect = DragDropEffects.Move;
+            };
+
+            // Handle DragDrop event to rearrange the items
+            wordsList.DragDrop += (sender, e) =>
+            {
+                wordsList.Enabled = false;
+                Point point = wordsList.PointToClient(new Point(e.X, e.Y));
+                int index = wordsList.IndexFromPoint(point);
+                if (index < 0) index = wordsList.Items.Count - 1;
+                object data = e.Data.GetData(typeof(string));
+                int oldIndex = wordsList.Items.IndexOf(data);
+                wordsList.Items.Remove(data);
+                wordsList.Items.Insert(index, data);
+                UpdateWordsArray(oldIndex, index);
+                PopulateDictionaryList();
+                wordsList.SelectedIndex = index;
+                UnsavedChanges();
+                wordsList.Enabled = true;
+            };
             ResizeAll();
+        }
+
+        private void UnsavedChanges()
+        {
+            if(buttonSaveDictionary.Enabled == false)
+            {
+                buttonSaveDictionary.Enabled = true;
+                this.Text += " (UNSAVED CHANGES)";
+            }
         }
 
         private void GUI_Load(object sender, EventArgs e)
@@ -148,35 +190,18 @@ namespace Language_Converter
             }
         }
 		
-		/*
-		//To allow the user to rearrange the contents of a ListBox in a C# WinForms application, we can use the drag-and-drop functionality of the ListBox control. Here's an example function that demonstrates how to implement this functionality:
-private void wordsList_MouseDown(object sender, MouseEventArgs e)
-{
-    if (wordsList.SelectedItem == null) return;
-    wordsList.DoDragDrop(wordsList.SelectedItem, DragDropEffects.Move);
-}
-
-private void listBox1_DragOver(object sender, DragEventArgs e)
-{
-    e.Effect = DragDropEffects.Move;
-}
-
-private void wordsList_DragDrop(object sender, DragEventArgs e)
-{
-    int newIndex = wordsList.IndexFromPoint(wordsList.PointToClient(new Point(e.X, e.Y)));
-    if (newIndex < 0) newIndex = wordsList.Items.Count - 1;
-    object droppedItem = e.Data.GetData(typeof(string));
-    wordsList.Items.Remove(droppedItem);
-    wordsList.Items.Insert(newIndex, droppedItem);
-}
-//This function uses the MouseDown, DragOver, and DragDrop events of the ListBox control to implement drag-and-drop functionality. When the user clicks on an item in the ListBox, the MouseDown event is triggered, and the selected item is added to the drag-and-drop data using the DoDragDrop method. When the user drags the item over the ListBox, the DragOver event is triggered, and the Effect property of the DragEventArgs object is set to Move to indicate that the item can be moved. When the user drops the item onto the ListBox, the DragDrop event is triggered, and the dropped item is removed from its original position in the ListBox and inserted at the new position specified by the IndexFromPoint method
-//To use this function in your WinForms application, you can add the MouseDown, DragOver, and DragDrop event handlers to your ListBox control and copy the code above into the corresponding event handlers.
-		*/
         private void wordsList_SelectedIndexChanged(object sender, EventArgs e)
         {
             UpdateWordsListSelection();
         }
-
+        private void wordsList_MouseClick(object sender, MouseEventArgs e)
+        {
+            UpdateWordsListSelection();
+        }
+        private void wordsList_DragEnter(object sender, DragEventArgs e)
+        {
+            UpdateWordsListSelection();
+        }
         private void UpdateWordsListSelection()
         {
             if (!wordIsModified)
@@ -244,6 +269,39 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
 
         }
 
+        
+        // Method to update the wordsArray based on the current order of items in the wordsList
+        private void UpdateWordsArray(int oldIndex, int newIndex)
+        {
+            List<DictionaryWord> wordsArray = RaharrTranslator.wordsArray;
+            DictionaryWord word = wordsArray[oldIndex];
+            word.index = newIndex;
+            wordsArray[oldIndex] = word;
+            word = wordsArray[newIndex];
+            word.index = oldIndex;
+            wordsArray[newIndex] = word;
+            
+            if (oldIndex < newIndex)
+            {
+                for (int i = oldIndex; i < newIndex; i++)
+                {
+                    var temp = wordsArray[i];
+                    wordsArray[i] = wordsArray[i + 1];
+                    wordsArray[i + 1] = temp;
+                }
+            }
+            else
+            {
+                for (int i = oldIndex; i > newIndex; i--)
+                {
+                    var temp = wordsArray[i];
+                    wordsArray[i] = wordsArray[i - 1];
+                    wordsArray[i - 1] = temp;
+                }
+            }
+            RaharrTranslator.wordsArray = wordsArray;
+        }
+        
         private void OutputSelectionChanged()
         {
             int pos = outputTextField.SelectionStart;
@@ -299,14 +357,14 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
         {
             SwitchButtonsEditedWord(false);
             Program.instance.ChangeWord(currentWord);
-            buttonSaveDictionary.Enabled = true;
+            UnsavedChanges();
         }
         private void buttAddWord_Click(object sender, EventArgs e)
         {
             DictionaryWord tempWord;
             if (!wordIsModified)
             {
-                tempWord = new DictionaryWord(" ", " ", " ", currentWord.index + 1);
+                tempWord = new DictionaryWord("", "", "", currentWord.index + 1);
             }
             else
             {
@@ -314,14 +372,14 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
             }
 
             Program.instance.AddWord(tempWord);
-            buttonSaveDictionary.Enabled = true;
+            UnsavedChanges();
         }
         private void buttonAddDivider_Click(object sender, EventArgs e)
         {
             int tempIndex = wordsList.SelectedIndex;
             DictionaryWord tempWord = DictionaryWord.Separator(currentWord.index + 1);
             Program.instance.AddWord(tempWord);
-            buttonSaveDictionary.Enabled = true;
+            UnsavedChanges();
             PopulateDictionaryList(tempIndex);
         }
         private void startConversionBtn_Click(object sender, EventArgs e)
@@ -336,6 +394,7 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
         {
             Program.instance.ExportDictionary(DicPathString.Text,saveCopyCheckbox.Checked);
             buttonSaveDictionary.Enabled = false;
+            this.Text = this.Text.Replace(" (UNSAVED CHANGES)","");
         }
 
         private void replaceLettersCheckbox_CheckedChanged(object sender, EventArgs e)
@@ -451,5 +510,6 @@ private void wordsList_DragDrop(object sender, DragEventArgs e)
         {
             OutputSelectionChanged();
         }
+
     }
 }

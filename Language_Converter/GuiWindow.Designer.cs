@@ -158,7 +158,11 @@
             this.wordsList.ScrollAlwaysVisible = true;
             this.wordsList.Size = new System.Drawing.Size(322, 184);
             this.wordsList.TabIndex = 9;
+            this.wordsList.Click += new System.EventHandler(this.wordsList_SelectedIndexChanged);
+            this.wordsList.MouseClick += new System.Windows.Forms.MouseEventHandler(this.wordsList_MouseClick);
             this.wordsList.SelectedIndexChanged += new System.EventHandler(this.wordsList_SelectedIndexChanged);
+            this.wordsList.DragEnter += new System.Windows.Forms.DragEventHandler(this.wordsList_DragEnter);
+            this.wordsList.DoubleClick += new System.EventHandler(this.wordsList_SelectedIndexChanged);
             // 
             // butAddWord
             // 
