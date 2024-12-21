@@ -19,6 +19,14 @@ namespace Language_Converter
       //  private bool displayInEnglish;
         private int winHeight = 100;
         private int winWidth = 100;
+        
+        // Import the necessary functions from user32.dll
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern int GetScrollPos(IntPtr hWnd, int nBar);
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern int SetScrollPos(IntPtr hWnd, int nBar, int nPos, bool bRedraw);
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
         public GUI()
         {
@@ -54,11 +62,15 @@ namespace Language_Converter
                 int oldIndex = wordsList.Items.IndexOf(data);
                 wordsList.Items.Remove(data);
                 wordsList.Items.Insert(index, data);
+                int scrollPos = GetScrollPos(wordsList.Handle, 1);
                 UpdateWordsArray(oldIndex, index);
                 PopulateDictionaryList();
                 wordsList.SelectedIndex = index;
                 UnsavedChanges();
                 wordsList.Enabled = true;
+                SetScrollPos(wordsList.Handle, 1, scrollPos, true);
+                SendMessage(wordsList.Handle, 0x0115, 4 + 0x10000 * scrollPos, 0);
+
             };
             ResizeAll();
         }
